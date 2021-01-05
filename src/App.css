@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.questions {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.side {
+  width: 50%;
+}
