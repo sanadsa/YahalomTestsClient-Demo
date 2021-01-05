@@ -1,6 +1,9 @@
 import axios from "axios";
+import environment from "../environments/environment";
 
-axios.interceptors.response.use(null, (error) => {
+const axiosCreate = axios.create({ baseURL: environment.serverUrl });
+
+axiosCreate.interceptors.response.use(null, (error) => {
   const expectedError =
     error.response &&
     error.response.status >= 400 &&
@@ -14,10 +17,10 @@ axios.interceptors.response.use(null, (error) => {
 });
 
 const methods = {
-  get: axios.get,
-  post: axios.post,
-  put: axios.put,
-  delete: axios.delete,
+  get: axiosCreate.get,
+  post: axiosCreate.post,
+  put: axiosCreate.put,
+  delete: axiosCreate.delete,
 };
 
 export default methods;

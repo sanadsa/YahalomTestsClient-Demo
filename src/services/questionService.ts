@@ -1,12 +1,11 @@
 import http from "./httpService";
-import env from "../environments/environment";
 
 export interface Question {
   Id: number;
   Title: string;
 }
 
-const serverRoute = env.serverUrl + "/api/Questions/";
+const serverRoute = "/api/Questions/";
 
 const QuestionService = {
   async getAllQuestions() {

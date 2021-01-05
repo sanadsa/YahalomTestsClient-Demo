@@ -32,18 +32,18 @@ class QuestionsForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="title">Title</label>
+          <div className="form-group space">
+            <label htmlFor="title">Title: </label>
             <input
               value={title}
               onChange={this.handleChange}
               id="title"
               type="text"
-              className="form-control"
+              className="input form-control"
             />
-            <div hidden={!errors.title} className="alert alert-danger">
-              {errors.title}
-            </div>
+            {errors.title && (
+              <div className="alert alert-danger">{errors.title}</div>
+            )}
           </div>
           <button className="btn btn-primary btn-sm">Add question</button>
         </form>

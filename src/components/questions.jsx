@@ -30,7 +30,7 @@ class Questions extends Component {
           <QuestionsTable questions={this.state.questions} />
         </div>
         <div className="side">
-          <h1>Question Form</h1>
+          <h1>Add a new question</h1>
           <QuestionsForm onAddQuestion={this.addQuestion} />
         </div>
       </div>

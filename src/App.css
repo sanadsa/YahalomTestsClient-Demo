@@ -39,10 +39,19 @@
 
 .questions {
   display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.space {
+  display: flex;
   justify-content: space-around;
-  margin: 50px;
 }
 
 .side {
-  width: 50%;
+  width: 45%;
+}
+
+.input {
+  width: 80%;
 }
