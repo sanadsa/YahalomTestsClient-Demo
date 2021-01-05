@@ -18,8 +18,8 @@ class Questions extends Component {
   }
 
   addQuestion = async (question) => {
-    await QuestionService.addQuestion(question);
-    this.getQuestions();
+    const addedQuestion = await QuestionService.addQuestion(question);
+    this.setState({ questions: [...this.state.questions, addedQuestion.data] });
   };
 
   render() {
