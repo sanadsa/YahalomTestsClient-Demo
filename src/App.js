@@ -8,5 +8,7 @@ function App() {
     </div>
   );
 }
+console.log("Not hi");
+console.log("Yes hi");
 
 export default App;
